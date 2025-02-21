@@ -33,7 +33,7 @@ INSTALLED_APPS = [
     'drf_yasg',
     'rest_framework_simplejwt',
     'account',
-
+    'side',
 
 ]
 
@@ -73,12 +73,14 @@ WSGI_APPLICATION = 'girl_guard.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('DB_NAME'),
+        # 'ENGINE': 'django.db.backends.postgresql',
+        # 'NAME': config('DB_NAME'),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / "db.sqlite3",
         'USER': config('DB_USER'),
         'PASSWORD': config('DB_PASS'),
         'HOST': config('DB_HOST'),
-        'PORT': config('DB_PORT')
+        'PORT': config('DB_PORT'),
     }
 }
 
@@ -136,7 +138,9 @@ EMAIL_USE_SSL = False
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
-    )
+    ),
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',     ],
 }
 
 SIMPLE_JWT = {
