@@ -1,29 +1,38 @@
 # 🛡️ GirlGuard (Technovation Girls 2025)
 
-> Backend API для мобильного приложения **GirlGuard**, разработанного для безопасного взаимодействия и поддержки девушек.  
+> Backend API for the **GirlGuard** cybersecurity platform. Developed as part of the Technovation Girls 2025 season.
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)
 ![Django](https://img.shields.io/badge/Django-4.0+-092E20?style=for-the-badge&logo=django)
 ![DRF](https://img.shields.io/badge/Django_REST-ff1709?style=for-the-badge&logo=django)
 
----
+## 📖 About the Project
+**GirlGuard** is a comprehensive cybersecurity solution designed to protect personal data and raise awareness about digital threats. This backend powers the web platform, handling user data, educational content, and security alerts.
 
-## 📖 О проекте
-
-**GirlGuard** — это серверная часть мобильного приложения, которая обеспечивает:
-
-- 🔐 **Безопасную аутентификацию пользователей** (JWT-токены через `simplejwt`)  
-- 📄 **API документацию** через Swagger/OpenAPI  
-- 👤 **Управление аккаунтами пользователей**  
-- 🚀 **Масштабируемую архитектуру** на Django REST Framework  
-
-**Цель проекта:** помочь девушкам чувствовать себя безопаснее, предоставляя инструменты для быстрого доступа к поддержке и информации.
+**Key Features (Backend):**
+* 🎓 **Cyber Hygiene Education**: API support for interactive courses and video modules on cybersecurity basics.
+* 🛡️ **Personal Cyber Defender**: Backend logic for storing and providing personalized security recommendations.
+* 🔔 **Notification System**: Infrastructure for alerting users about suspicious account activity.
+* 🔐 **Secure Data Handling**: Encrypted storage for user credentials and sensitive information.
+* 👤 **User Management**: Authentication and profile management for individuals and small businesses.
 
 ---
 
-## 🛠️ Установка и запуск
+## 🛠️ Installation & Setup
 
-### 1. Клонируйте репозиторий
+Follow these steps to run the project locally.
+
+### 1. Clone the repository
 ```bash
-git clone https://github.com/GirlsGuard/python-backend.git
-cd python-backend
+git clone https://github.com/Ma-dina/Python-Backend.git
+cd Python-Backend
+
+Install Dependencies
+Make sure you have Python installed.
+pip install -r req.txt
+
+Run Migrations & Server
+Bash
+
+python manage.py migrate
+python manage.py runserver
